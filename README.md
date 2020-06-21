@@ -35,6 +35,8 @@ swifty-gpu
 
 #### Run every x seconds
 
+Install `watch` using `brew install watch`.
+
 ```bash
 # replace <x> with a number of your choice
 watch -n <x> swifty-gpu
