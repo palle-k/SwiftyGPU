@@ -20,12 +20,12 @@ A command-line GPU usage monitor similar to `nvidia-smi` that runs on macOS with
 
 ```bash
 swift build -c release
-cp .build/release/SwiftyGPU /usr/local/bin/swifty-gpu
+cp .build/release/swifty-gpu /usr/local/bin/swifty-gpu
 ```
 
 SwiftyGPU can then be invoked simply by typing `swifty-gpu` into your shell.
 
-If you don't want to install SwiftyGPU permantently, you can also use `swift run SwiftyGPU` instead of `swifty-gpu` in the subsequent examples.
+If you don't want to install SwiftyGPU permantently, you can also use `swift run swifty-gpu` instead of `swifty-gpu` in the subsequent examples.
 
 #### Run once:
 
