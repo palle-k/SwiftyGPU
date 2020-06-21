@@ -209,16 +209,20 @@ if CommandLine.arguments.contains("--raw") {
     exit(0)
 }
 
+func separator() {
+    print("+\(String(repeating: "-", count: 78))+")
+}
+
 let formatter = DateFormatter()
 formatter.timeStyle = .long
 formatter.dateStyle = .long
 
-print(String(repeating: "-", count: 80))
+separator()
 print("| SwiftyGPU " + formatter.string(from: Date()).leftPadding(toLength: 66, using: " ") + " |")
-print(String(repeating: "-", count: 80))
+separator()
 
 print("| ID | Name".padding(toLength: 39, withPad: " ", startingAt: 0) + "|          VRAM (used/total) | GPU Util ".padding(toLength: 40, withPad: " ", startingAt: 0) + "|")
-print(String(repeating: "-", count: 80))
+separator()
 
 for (i, (dev)) in devs.enumerated() {
     print("|" + "\(i)".leftPadding(toLength: 3, using: " ") + " | ", terminator: "") // total length: 6
@@ -242,6 +246,6 @@ for (i, (dev)) in devs.enumerated() {
     
     print(" \(usagePercent) %".leftPadding(toLength: 9, using: " ") + " |")
 
-    print(String(repeating: "-", count: 80))
+    separator()
 }
 
